@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="/assets/logo/primary.png"
+            src="/assets/logos/primary.png"
             width={150}
             height={52}
             className="h-[52px] w-auto cursor-pointer"
