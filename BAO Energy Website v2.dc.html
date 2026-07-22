@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/tokens/colors.css">
+<link rel="stylesheet" href="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/tokens/typography.css">
+<link rel="stylesheet" href="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/tokens/effects.css">
+<link rel="stylesheet" href="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/styles.css">
+<script src="_ds/bao-energy-design-system-3d84fd82-47a3-4146-8bd9-36987aee026c/_ds_bundle.js"></script>
+<style>
+body{margin:0}
+a{color:var(--link);text-decoration:none}a:hover{color:var(--link-hover)}
+img{display:block}
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+[data-reveal].in{opacity:1;transform:none}
+</style>
+</helmet>
+<div style="font-family:var(--font-body);color:var(--text-body);background:var(--white);--brand-accent:{{ accent }}">
+
+  <div id="v2-nav" style="position:sticky;top:0;z-index:60;background:var(--white);border-bottom:1px solid var(--border-subtle);transition:box-shadow .3s ease">
+    <div style="max-width:1240px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between">
+      <img src="assets/logo-primary.svg" onClick="{{ goHome }}" style="height:44px;cursor:pointer" alt="Bao Energy">
+      <div style="display:flex;align-items:center;gap:38px">
+        <sc-for list="{{ navLinks }}" as="l" hint-placeholder-count="4">
+          <a onClick="{{ l.onClick }}" style="font-family:var(--font-display);font-weight:600;font-size:15px;color:{{ l.color }};cursor:pointer;padding:6px 0;border-bottom:2px solid {{ l.bar }}">{{ l.label }}</a>
+        </sc-for>
+        <a href="mailto:info@baoenergyng.com" style="background:var(--brand-accent);color:var(--charcoal-900);font-family:var(--font-display);font-weight:700;font-size:15px;padding:11px 24px;border-radius:var(--radius-sm)">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="position:relative;height:660px;overflow:hidden">
+      <div id="v2-hero-bg" style="position:absolute;inset:-60px 0;background:url(assets/hero-workers.jpg) center 28%/cover;will-change:transform"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,9,7,.86),rgba(10,9,7,.42) 60%,rgba(10,9,7,.2))"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:0 40px;height:100%;display:flex;flex-direction:column;justify-content:center">
+        <div style="width:64px;height:4px;background:var(--brand-accent);margin-bottom:28px"></div>
+        <h1 style="font:var(--text-display);color:#fff;max-width:820px;margin:0;text-wrap:balance">Meeting Future Demand In A Sustainable Way</h1>
+        <p style="font:var(--text-body-lg);color:var(--gray-150);margin:22px 0 34px;max-width:560px">An indigenous, fully-integrated services provider delivering value-added solutions across Oil &amp; Gas, Telecommunications and FMCG in Nigeria.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Button" variant="accent" size="lg" on-click="{{ goServices }}" hint-size="180px,52px">➜ Explore Our Services</x-import>
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Button" variant="outline" size="lg" on-click="{{ goAbout }}" hint-size="140px,52px">About Us</x-import>
+        </div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;background:rgba(7,6,5,.55);backdrop-filter:blur(2px);border-top:1px solid rgba(255,255,255,.12)">
+        <div style="max-width:1240px;margin:0 auto;padding:22px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+          <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--brand-accent)">{{ st.big }}</div>
+              <div style="font-size:13px;color:var(--gray-300);line-height:1.5;margin-top:4px">{{ st.label }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <section style="max-width:1240px;margin:0 auto;padding:100px 40px" data-reveal>
+      <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center">
+        <div style="position:relative;height:460px;border-radius:14px;overflow:hidden">
+          <img src="assets/containers.jpg" style="width:100%;height:100%;object-fit:cover" alt="Operations">
+          <div style="position:absolute;left:-1px;bottom:-1px;background:var(--brand-accent);color:var(--charcoal-900);padding:20px 26px;border-top-right-radius:14px;max-width:260px">
+            <div style="font-family:var(--font-display);font-weight:800;font-size:20px;line-height:1.25">A Vital Energy Resource For A Better Tomorrow</div>
+          </div>
+        </div>
+        <div>
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Eyebrow" hint-size="120px,34px">Who We Are</x-import>
+          <h2 style="font:var(--text-h2);margin:22px 0 22px;color:var(--text-heading);text-wrap:balance">Providing affordable and reliable energy services</h2>
+          <p style="font:var(--text-body);color:var(--text-body);margin:0 0 18px">BaoEnergy Services Ltd. was established to deliver exceptional value-added services across a range of industries, empowering our clients with top-notch solutions in the most proficient and adept manner. Our sustained competitive advantage strategically positions us to accomplish our clients' goals.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin:26px 0 30px">
+            <sc-for list="{{ sectors }}" as="sec" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:600;font-size:15px;color:var(--text-heading)"><span style="color:var(--brand-accent)">➜</span>{{ sec }}</div>
+            </sc-for>
+          </div>
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Button" variant="dark" size="md" on-click="{{ goAbout }}" hint-size="150px,46px">Discover More</x-import>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--charcoal-900);padding:96px 40px" data-reveal>
+      <div style="max-width:1240px;margin:0 auto">
+        <div style="max-width:640px;margin-bottom:52px">
+          <div style="font:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);color:var(--brand-accent)">What We Offer</div>
+          <div style="width:64px;height:3px;background:var(--brand-accent);margin:12px 0 22px"></div>
+          <h2 style="font:var(--text-h2);color:#fff;margin:0;text-wrap:balance">Integrated support across the full asset lifecycle</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+          <sc-for list="{{ homeServices }}" as="s" hint-placeholder-count="3">
+            <div onClick="{{ s.open }}" style="position:relative;height:340px;overflow:hidden;border-radius:12px;background:var(--charcoal-800);cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-6px)">
+              <img src="{{ s.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="{{ s.title }}">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(9,8,6,.95),rgba(9,8,6,.15) 62%)"></div>
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
+                <div style="font:var(--text-h4);color:#fff;margin-bottom:8px">{{ s.title }}</div>
+                <div style="font:var(--text-body-sm);color:var(--gray-300)">{{ s.excerpt }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;margin-top:36px">
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Button" variant="accent" size="md" on-click="{{ goServices }}" hint-size="150px,46px">View All Services</x-import>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1240px;margin:0 auto;padding:100px 40px" data-reveal>
+      <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center">
+        <div>
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Eyebrow" hint-size="140px,34px">Health, Safety &amp; Environment</x-import>
+          <h2 style="font:var(--text-h2);margin:22px 0 20px;color:var(--text-heading);text-wrap:balance">Safety is the foundation of every service we deliver</h2>
+          <p style="font:var(--text-body);color:var(--text-body);margin:0 0 26px">We regard the health of our people, the safety of every worksite, and the protection of the environment as inseparable from operational excellence. Every campaign is planned, executed and reviewed against a structured HSE framework built around a single commitment — zero harm.</p>
+          <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Button" variant="dark" size="md" on-click="{{ goHSE }}" hint-size="150px,46px">Our HSE Approach</x-import>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+          <sc-for list="{{ hsePrinciples }}" as="p" hint-placeholder-count="4">
+            <div style="border:1px solid var(--border-subtle);border-radius:12px;padding:24px;background:var(--surface-page)">
+              <div style="font-family:var(--font-display);font-weight:800;font-size:15px;color:var(--brand-accent);margin-bottom:8px">{{ p.no }}</div>
+              <div style="font:var(--text-h4);color:var(--text-heading);margin-bottom:8px">{{ p.title }}</div>
+              <div style="font:var(--text-body-sm);color:var(--text-muted)">{{ p.short }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--surface-sunken);padding:72px 40px" data-reveal>
+      <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:56px;flex-wrap:wrap">
+        <div style="flex:0 0 auto">
+          <div style="font:var(--text-eyebrow);letter-spacing:var(--tracking-eyebrow);color:var(--text-heading)">Trusted Brands</div>
+          <div style="width:56px;height:3px;background:var(--brand-accent);margin-top:10px"></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:56px;flex:1">
+          <img src="assets/client-seplat.jpg" style="height:52px;width:auto;object-fit:contain" alt="Seplat Energy">
+          <img src="assets/client-firstep.png" style="height:60px;width:auto;object-fit:contain" alt="First Exploration & Petroleum">
+        </div>
+      </div>
+    </section>
+
+    <section style="position:relative;padding:130px 40px;text-align:center">
+      <div style="position:absolute;inset:0;background:url(assets/cooling-towers.jpg) center/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(rgba(7,6,5,.82),rgba(7,6,5,.9))"></div>
+      <div style="position:relative;max-width:820px;margin:0 auto" data-reveal>
+        <h2 style="font:var(--text-h1);color:#fff;margin:0;text-wrap:balance">Together, We Can Create A Safe And Sustainable Future</h2>
+        <div style="width:80px;height:3px;background:var(--brand-accent);margin:24px auto 26px"></div>
+        <p style="font:var(--text-body-lg);color:var(--gray-150);margin:0 0 32px">Speak with our team about maintenance, integrity, procurement, metering and manpower support tailored to your operations.</p>
+        <a href="mailto:info@baoenergyng.com" style="display:inline-flex;align-items:center;gap:8px;background:var(--brand-accent);color:var(--charcoal-900);font-family:var(--font-display);font-weight:700;font-size:16px;padding:16px 32px;border-radius:var(--radius-sm)">➜ Contact Us</a>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="position:relative;height:360px">
+      <div style="position:absolute;inset:0;background:url(assets/containers.jpg) center 55%/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,9,7,.8),rgba(10,9,7,.5))"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:0 40px;height:100%;display:flex;flex-direction:column;justify-content:center">
+        <div style="width:56px;height:4px;background:var(--brand-accent);margin-bottom:20px"></div>
+        <h1 style="font:var(--text-h1);color:#fff;margin:0">About Us</h1>
+      </div>
+    </div>
+    <section style="max-width:1240px;margin:0 auto;padding:88px 40px" data-reveal>
+      <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Eyebrow" hint-size="120px,34px">Who We Are</x-import>
+      <h2 style="font:var(--text-h2);margin:22px 0 36px;color:var(--text-heading)">Providing affordable and reliable energy</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;font:var(--text-body);color:var(--text-body)">
+        <div>
+          <p style="margin:0 0 20px">Welcome to BaoEnergy Services Ltd., an innovative and fully-integrated solutions provider established with the mission of delivering exceptional value-added services across a range of industries including Oil and Gas, Telecommunication, FMCG, and more, all within the vibrant landscape of Nigeria. Our core commitment revolves around the provision of unparalleled services to our esteemed clients, empowering them with top-notch solutions in the most proficient and adept manner. Our unwavering dedication is directed towards ensuring the utmost contentment of our clients, translating into heightened value while optimizing costs.</p>
+          <p style="margin:0">At BaoEnergy Services Ltd., we take pride in our unique approach to catering to the diverse needs of industries, ensuring that each client benefits from a tailored and comprehensive experience.</p>
+        </div>
+        <div>
+          <p style="margin:0 0 20px">Our intricate understanding of the intricacies within sectors enables us to craft solutions that go beyond conventional boundaries, enabling our clients to thrive in the ever-evolving market. With an unwavering passion for excellence, BaoEnergy Services Ltd. embraces innovation as a driving force behind our operations. We constantly seek ways to elevate our services, introducing novel concepts and cutting-edge methodologies that propel our clients towards success.</p>
+          <p style="margin:0">Our commitment to remaining at the forefront of technological advancements and industry trends ensures that our clients are equipped with the best tools to achieve their goals.</p>
+        </div>
+      </div>
+    </section>
+    <section style="background:var(--charcoal-900);padding:80px 40px" data-reveal>
+      <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+          <div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:30px;color:var(--brand-accent)">{{ st.big }}</div>
+            <div style="font-size:14px;color:var(--gray-300);line-height:1.55;margin-top:6px">{{ st.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isServices }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="position:relative;height:360px">
+      <div style="position:absolute;inset:0;background:url(assets/refinery-sunset.jpg) center/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,9,7,.78),rgba(10,9,7,.5))"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:0 40px;height:100%;display:flex;flex-direction:column;justify-content:center">
+        <div style="width:56px;height:4px;background:var(--brand-accent);margin-bottom:20px"></div>
+        <h1 style="font:var(--text-h1);color:#fff;margin:0">Our Services</h1>
+      </div>
+    </div>
+    <section style="max-width:1240px;margin:0 auto;padding:88px 40px" data-reveal>
+      <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Eyebrow" hint-size="140px,34px">What We Offer</x-import>
+      <h2 style="font:var(--text-h3);max-width:780px;margin:22px 0 44px;color:var(--text-heading);text-wrap:pretty">Our sustained competitive advantage within the industry strategically positions us to accomplish our clients' goals.</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <div onClick="{{ s.open }}" style="position:relative;height:320px;overflow:hidden;border-radius:12px;background:var(--charcoal-800);cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-6px)">
+            <img src="{{ s.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="{{ s.title }}">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(9,8,6,.95),rgba(9,8,6,.15) 62%)"></div>
+            <div style="position:absolute;left:0;right:0;bottom:0;padding:24px">
+              <div style="font:var(--text-h4);color:#fff;margin-bottom:8px">{{ s.title }}</div>
+              <div style="font:var(--text-body-sm);color:var(--gray-300)">{{ s.excerpt }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="position:relative;height:440px">
+      <img src="{{ detailImg }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="{{ detailTitle }}">
+      <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,9,7,.82),rgba(10,9,7,.42))"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:0 40px;height:100%;display:flex;flex-direction:column;justify-content:center">
+        <a onClick="{{ goServices }}" style="color:var(--gray-150);cursor:pointer;font-size:14px;margin-bottom:12px">← Back to Services</a>
+        <div style="width:56px;height:4px;background:var(--brand-accent);margin-bottom:18px"></div>
+        <h1 style="font:var(--text-h1);color:#fff;margin:0;max-width:820px">{{ detailTitle }}</h1>
+      </div>
+    </div>
+    <section style="max-width:900px;margin:0 auto;padding:72px 40px" data-reveal>
+      <sc-for list="{{ detailBody }}" as="para" hint-placeholder-count="3">
+        <p style="font:var(--text-body);color:var(--text-body);margin:0 0 22px">{{ para }}</p>
+      </sc-for>
+    </section>
+    <section style="position:relative;padding:104px 40px;text-align:center">
+      <div style="position:absolute;inset:0;background:url(assets/cooling-towers.jpg) center/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(rgba(7,6,5,.82),rgba(7,6,5,.9))"></div>
+      <div style="position:relative;max-width:780px;margin:0 auto">
+        <h2 style="font:var(--text-h2);color:#fff;margin:0">A Vital Energy Resource For A Better Tomorrow</h2>
+        <div style="width:80px;height:3px;background:var(--brand-accent);margin:22px auto 26px"></div>
+        <a href="mailto:info@baoenergyng.com" style="display:inline-flex;align-items:center;gap:8px;background:var(--brand-accent);color:var(--charcoal-900);font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:var(--radius-sm)">➜ Contact Us</a>
+      </div>
+    </section>
+    <section style="max-width:1240px;margin:0 auto;padding:76px 40px" data-reveal>
+      <h3 style="font:var(--text-h4);color:var(--text-heading);margin:0 0 22px">Other Services</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+        <sc-for list="{{ relatedServices }}" as="s" hint-placeholder-count="2">
+          <div onClick="{{ s.open }}" style="position:relative;height:230px;overflow:hidden;border-radius:12px;background:var(--charcoal-800);cursor:pointer;transition:transform .4s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-6px)">
+            <img src="{{ s.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" alt="{{ s.title }}">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(9,8,6,.94),rgba(9,8,6,.1) 60%)"></div>
+            <div style="position:absolute;left:0;right:0;bottom:0;padding:20px 22px">
+              <div style="font:var(--text-h4);color:#fff">{{ s.title }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isHSE }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <div style="position:relative;height:360px">
+      <div style="position:absolute;inset:0;background:url(assets/worker.jpg) center 30%/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,9,7,.8),rgba(10,9,7,.45))"></div>
+      <div style="position:relative;max-width:1240px;margin:0 auto;padding:0 40px;height:100%;display:flex;flex-direction:column;justify-content:center">
+        <div style="width:56px;height:4px;background:var(--brand-accent);margin-bottom:20px"></div>
+        <h1 style="font:var(--text-h1);color:#fff;margin:0;max-width:760px">Health, Safety &amp; Environment</h1>
+      </div>
+    </div>
+    <section style="max-width:900px;margin:0 auto;padding:80px 40px 56px" data-reveal>
+      <x-import component-from-global-scope="BAOEnergyDesignSystem_3d84fd.Eyebrow" hint-size="140px,34px">Our Commitment</x-import>
+      <h2 style="font:var(--text-h2);margin:22px 0 24px;color:var(--text-heading);text-wrap:balance">Zero harm is the standard against which we measure every task</h2>
+      <p style="font:var(--text-body);color:var(--text-body);margin:0 0 18px">At BaoEnergy Services Ltd. we regard the health of our people, the safety of every worksite, and the protection of the environment as inseparable from operational excellence. From valve servicing and instrumentation to metering recertification and manpower deployment, each scope of work is planned, executed and reviewed against a structured HSE framework.</p>
+      <p style="font:var(--text-body);color:var(--text-body);margin:0">That framework is not a document that sits on a shelf — it shapes how our teams mobilise, how equipment is certified, and how every job is closed out. It is the reason our clients trust us on live, high-consequence assets.</p>
+    </section>
+    <section style="background:var(--surface-sunken);padding:72px 40px" data-reveal>
+      <div style="max-width:1240px;margin:0 auto">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px">
+          <sc-for list="{{ hsePrinciples }}" as="p" hint-placeholder-count="4">
+            <div style="background:var(--surface-page);border-radius:14px;padding:32px;border-top:3px solid var(--brand-accent)">
+              <div style="font:var(--text-h4);color:var(--text-heading);margin-bottom:12px">{{ p.title }}</div>
+              <div style="font:var(--text-body);color:var(--text-body)">{{ p.long }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+    <section style="position:relative;padding:100px 40px;text-align:center">
+      <div style="position:absolute;inset:0;background:url(assets/refinery-night.jpg) center/cover"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(rgba(7,6,5,.84),rgba(7,6,5,.9))"></div>
+      <div style="position:relative;max-width:760px;margin:0 auto">
+        <h2 style="font:var(--text-h2);color:#fff;margin:0 0 16px">Work with a partner that puts safety first</h2>
+        <div style="width:72px;height:3px;background:var(--brand-accent);margin:0 auto 26px"></div>
+        <a href="mailto:info@baoenergyng.com" style="display:inline-flex;align-items:center;gap:8px;background:var(--brand-accent);color:var(--charcoal-900);font-family:var(--font-display);font-weight:700;font-size:16px;padding:15px 30px;border-radius:var(--radius-sm)">➜ Contact Us</a>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <footer style="background:var(--charcoal-950);color:var(--gray-300);padding:68px 40px 26px">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1.4fr 1fr;gap:44px;max-width:1240px;margin:0 auto">
+      <div>
+        <img src="assets/logo-white.svg" style="height:48px;margin-bottom:18px" alt="Bao Energy">
+        <p style="font-size:14px;line-height:1.75;color:var(--gray-300);margin:0;max-width:340px">We are an indigenous and integrated services provider formed to deliver value added services to various industries such as the Oil and Gas, Telecommunication, FMCG, etc. within Nigeria.</p>
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <a href="#" style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-on-dark);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gray-300)">f</a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-on-dark);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gray-300)">✕</a>
+          <a href="#" style="width:36px;height:36px;border-radius:50%;border:1px solid var(--border-on-dark);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gray-300)">▶</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-family:var(--font-display);font-weight:700;margin:0 0 18px">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a onClick="{{ goHome }}" style="color:var(--gray-300);font-size:14px;cursor:pointer">Home</a>
+          <a onClick="{{ goAbout }}" style="color:var(--gray-300);font-size:14px;cursor:pointer">About</a>
+          <a onClick="{{ goServices }}" style="color:var(--gray-300);font-size:14px;cursor:pointer">Services</a>
+          <a onClick="{{ goHSE }}" style="color:var(--gray-300);font-size:14px;cursor:pointer">HSE</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-family:var(--font-display);font-weight:700;margin:0 0 18px">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+            <a onClick="{{ s.open }}" style="color:var(--gray-300);font-size:14px;cursor:pointer">{{ s.title }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:#fff;font-family:var(--font-display);font-weight:700;margin:0 0 18px">Get In Touch</h4>
+        <div style="font-size:14px;line-height:1.9;color:var(--gray-300)">
+          36 Calabar Street, Surulere, Lagos<br>
+          <a href="mailto:info@baoenergyng.com" style="color:var(--brand-accent)">info@baoenergyng.com</a><br>
+          <a href="mailto:baoenergyng@gmail.com" style="color:var(--brand-accent)">baoenergyng@gmail.com</a><br>
+          <a href="tel:+2348188041526" style="color:var(--gray-300)">+234 818 804 1526</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1240px;margin:44px auto 0;border-top:1px solid var(--border-on-dark);padding-top:22px;display:flex;justify-content:space-between;font-size:13px;color:var(--gray-500)">
+      <span>© 2026 BAO Energy, All rights reserved.</span>
+      <span style="display:flex;gap:20px"><a onClick="{{ goAbout }}" style="color:var(--gray-500);cursor:pointer">About</a><a href="#" style="color:var(--gray-500)">Privacy Policy</a></span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:920},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#f6851f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#f6851f&quot;,&quot;#e0771a&quot;,&quot;#2f7a4f&quot;,&quot;#14110d&quot;],&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home', detail: null };
+
+  data() {
+    return [
+      { id:'svc-1', title:'Maintenance Support Services', img:'assets/refinery-cloudy.jpg',
+        excerpt:'Valve servicing, instrumentation calibration, gas detector and breathing apparatus support.',
+        body:[
+          'Maintenance Support Services in our Company encompass a range of essential activities aimed at ensuring the smooth operation and longevity of equipment and systems. One crucial aspect of these services is valve maintenance, which includes tasks such as valve greasing campaigns and general valve servicing.',
+          'Another vital component of maintenance support services is the upkeep of general instrumentation. This involves tasks such as equipment calibration, repair, and servicing. Skilled technicians are responsible for troubleshooting any instrument-related issues and ensuring their accuracy and reliability.',
+          'Portable gas detectors and monitors play a critical role in maintaining a safe working environment in the energy industry. Calibration and repairs of these devices are essential to ensure their accuracy and reliability in detecting potentially hazardous gases.'
+        ] },
+      { id:'svc-2', title:'Asset Integrity Management', img:'assets/refinery-night.jpg',
+        excerpt:'Protecting the integrity and reliability of equipment, structures and systems across their lifecycle.',
+        body:[
+          'Asset Integrity Management is a crucial service that focuses on ensuring the integrity and reliability of equipment, structures, and systems throughout their operational lifecycle, minimizing risk and maximizing uptime.',
+          'Through structured inspection regimes, condition monitoring, and risk-based assessment, we help clients extend asset life, maintain regulatory compliance, and avoid unplanned downtime across their facilities.'
+        ] },
+      { id:'svc-3', title:'Procurement Services (Equipment and Spares/Material)', img:'assets/container-ship.jpg',
+        excerpt:'Sourcing essential equipment, spares and materials reliably and cost-effectively.',
+        body:[
+          'Procurement Services play a crucial role in ensuring the availability of essential equipment, spares, and materials necessary for the smooth running of operations, sourced reliably and cost-effectively.',
+          'Leveraging an established supplier network, we manage sourcing, expediting, quality assurance, and logistics so that our clients receive the right materials at the right time and the right price.'
+        ] },
+      { id:'svc-4', title:'Oil & Gas Metering System Recertification and Assurance', img:'assets/refinery-sunset.jpg',
+        excerpt:'Accurate measurement and reliable data for fair transactions and regulatory compliance.',
+        body:[
+          'The service of Oil & Gas Metering System Recertification and Assurance is vital to ensure accurate measurement and reliable data, supporting fair commercial transactions and regulatory compliance.',
+          'Our specialists verify, recertify, and assure metering systems against industry standards, delivering the measurement confidence required for custody transfer and allocation.'
+        ] },
+      { id:'svc-5', title:'Manpower Support Services', img:'assets/worker.jpg',
+        excerpt:'Competent, skilled personnel supporting every aspect of facility operations.',
+        body:[
+          'Manpower Support Services are designed to provide competent and skilled personnel to support various aspects of facility operations. This service supplies trained technicians, operators, and specialists on demand.',
+          'We recruit, vet, and deploy personnel matched to each client\u2019s technical and operational requirements, providing flexible resourcing that scales with project needs.'
+        ] },
+      { id:'svc-6', title:'Others', img:'assets/cooling-towers.jpg',
+        excerpt:'Project Management. Waste Management. Logistics Management Consulting.',
+        body:[
+          'Beyond our core disciplines we offer a range of complementary value-added services, including Project Management, Waste Management, and Logistics Management Consulting.',
+          'These offerings round out our integrated approach, allowing clients to consolidate multiple support needs with a single, dependable partner.'
+        ] }
+    ];
+  }
+
+  stats() {
+    return [
+      { big:'3', label:'Core sectors — Oil & Gas, Telecoms, FMCG' },
+      { big:'6', label:'Integrated service lines' },
+      { big:'100%', label:'Indigenous, fully-integrated provider' },
+      { big:'Lagos', label:'Headquartered in Surulere, Nigeria' }
+    ];
+  }
+  sectorList() { return ['Oil & Gas', 'Telecommunications', 'FMCG', 'Project & Logistics']; }
+  hse() {
+    return [
+      { no:'01', title:'People First', short:'Every worker is empowered to stop work when a condition looks unsafe.',
+        long:'No task is so urgent that it cannot be done safely. Every member of our workforce carries the authority — and the responsibility — to stop work the moment a condition appears unsafe, without fear of reprisal.' },
+      { no:'02', title:'Rigorous Standards', short:'Procedures aligned to recognised codes and client requirements.',
+        long:'We align our procedures with recognised industry codes and client-specific requirements, supported by competency-based training, permit-to-work discipline and routine certification of tools and equipment.' },
+      { no:'03', title:'Environmental Care', short:'Disciplined waste management, spill prevention and responsible resource use.',
+        long:'We work to minimise our footprint on every project through disciplined waste management, spill prevention, and responsible use of resources — protecting the communities and environments in which we operate.' },
+      { no:'04', title:'Continuous Improvement', short:'Audits and near-miss reporting feed a steady cycle of review.',
+        long:'Incidents, near-misses and audits feed a structured cycle of review. We learn deliberately from every job so that the standard of everything we do rises steadily over time.' }
+    ];
+  }
+
+  go = (label) => {
+    const map = { Home:'home', About:'about', Services:'services', HSE:'hse' };
+    this.goPage(map[label] || String(label).toLowerCase());
+  };
+  goPage = (p) => { this.setState({ page:p, detail:null }); window.scrollTo(0,0); };
+  openDetail = (s) => { this.setState({ page:'detail', detail:s }); window.scrollTo(0,0); };
+
+  componentDidMount() {
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); this._io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    this._observe();
+    this._onScroll = () => {
+      const nav = document.getElementById('v2-nav');
+      if (nav) nav.style.boxShadow = window.scrollY > 12 ? '0 6px 24px rgba(12,10,8,.12)' : 'none';
+      const hero = document.getElementById('v2-hero-bg');
+      if (hero) hero.style.transform = 'translateY(' + (window.scrollY * 0.18) + 'px)';
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentDidUpdate() { this._observe(); if (this._onScroll) this._onScroll(); }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); if (this._onScroll) window.removeEventListener('scroll', this._onScroll); }
+  _observe() {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('[data-reveal]:not([data-io])').forEach(el => { el.setAttribute('data-io','1'); this._io.observe(el); });
+    });
+  }
+
+  renderVals() {
+    const page = this.state.page, detail = this.state.detail;
+    const svcs = this.data().map(s => ({ ...s, open:()=>this.openDetail(s) }));
+    const navPage = page==='home' ? 'Home' : page==='about' ? 'About' : page==='hse' ? 'HSE' : 'Services';
+    const links = [['Home','home'],['About','about'],['Services','services'],['HSE','hse']].map(([label,key]) => {
+      const active = key===page || (key==='services' && page==='detail');
+      return { label, color: active ? 'var(--brand-accent)' : 'var(--text-heading)', bar: active ? 'var(--brand-accent)' : 'transparent', onClick: () => this.goPage(key) };
+    });
+    return {
+      page: navPage,
+      isHome: page==='home', isAbout: page==='about', isServices: page==='services', isDetail: page==='detail', isHSE: page==='hse',
+      navLinks: links,
+      services: svcs,
+      homeServices: svcs.slice(0,3),
+      stats: this.stats(),
+      sectors: this.sectorList(),
+      hsePrinciples: this.hse(),
+      detailTitle: detail ? detail.title : '',
+      detailImg: detail ? detail.img : '',
+      detailBody: detail ? detail.body : [],
+      relatedServices: detail ? svcs.filter(s=>s.id!==detail.id).slice(0,2) : [],
+      accent: this.props.accentColor ?? '#f6851f',
+      goHome: () => this.goPage('home'),
+      goAbout: () => this.goPage('about'),
+      goServices: () => this.goPage('services'),
+      goHSE: () => this.goPage('hse')
+    };
+  }
+}
+</script>
+</body>
+</html>
