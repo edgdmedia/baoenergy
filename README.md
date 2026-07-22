@@ -141,3 +141,13 @@ All under `assets/` (stock photography + real brand vectors). BAO does not have 
 - The design system (tokens + components: Button, Eyebrow, ServiceCard, SiteNav) lives under `_ds/bao-energy-design-system-.../`; the CSS token files define every `--*` value above.
 
 Contact details used throughout: **36 Calabar Street, Surulere, Lagos** · info@baoenergyng.com · baoenergyng@gmail.com · +234 818 804 1526.
+
+## Next.js Port & Cloudflare Deployment
+
+This project has been ported to Next.js using Tailwind CSS v4 and is configured for dynamic serverless deployment to Cloudflare Workers via `@opennextjs/cloudflare`.
+
+### Development & Deploy Workflow
+1. Direct all local edits and commits to the `development` branch.
+2. Push your changes to `origin/development`.
+3. To deploy your changes, create a Pull Request from `development` into `main` on GitHub.
+4. Cloudflare automatically builds and deploys your site once the PR is merged into `main`.
