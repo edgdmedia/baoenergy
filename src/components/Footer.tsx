@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <Link href="/">
             <Image
-              src="/assets/logo/logo-white.png"
+              src="/assets/logos/logo-white.png"
               width={130}
               height={48}
               className="h-[48px] w-auto mb-[18px]"
@@ -23,21 +23,30 @@ export default function Footer() {
           <div className="flex gap-[10px]">
             <a
               href="#"
-              className="w-[36px] height-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-[13px] text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              aria-label="Facebook"
             >
-              f
+              <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
             </a>
             <a
               href="#"
-              className="w-[36px] height-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-[13px] text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              aria-label="X"
             >
-              ✕
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
             </a>
             <a
               href="#"
-              className="w-[36px] height-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-[13px] text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              aria-label="YouTube"
             >
-              ▶
+              <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.53 3.5 12 3.5 12 3.5s-7.53 0-9.388.555A3.003 3.003 0 0 0 .502 6.163C0 8.07 0 12 0 12s0 3.93.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.47 20.5 12 20.5 12 20.5s7.53 0 9.388-.555a3.003 3.003 0 0 0 2.11-2.108C24 15.93 24 12 24 12s0-3.93-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
             </a>
           </div>
         </div>
