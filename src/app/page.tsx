@@ -10,7 +10,10 @@ export default function Home() {
 
   return (
     <ScrollReveal>
-      {/* Mobile Stats Strip - Below menu bar, above Hero */}
+      {/* Hero Component */}
+      <Hero />
+
+      {/* Mobile Stats Strip - Below Home Banner */}
       <div className="block md:hidden bg-charcoal-900 border-b border-charcoal-800 py-6 px-6">
         <div className="grid grid-cols-2 gap-4">
           {stats.map((st, i) => (
@@ -25,9 +28,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/* Hero Component */}
-      <Hero />
 
       {/* Who We Are */}
       <section
