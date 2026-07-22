@@ -3,13 +3,29 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
-import { services, hsePrinciples, sectors } from "@/data/servicesData";
+import { services, hsePrinciples, sectors, stats } from "@/data/servicesData";
 
 export default function Home() {
   const homeServices = services.slice(0, 3);
 
   return (
     <ScrollReveal>
+      {/* Mobile Stats Strip - Below menu bar, above Hero */}
+      <div className="block md:hidden bg-charcoal-900 border-b border-charcoal-800 py-6 px-6">
+        <div className="grid grid-cols-2 gap-4">
+          {stats.map((st, i) => (
+            <div key={i} className="bg-charcoal-800 p-4 rounded-xl border border-charcoal-700/50">
+              <div className="font-display font-extrabold text-[20px] text-brand-accent leading-none">
+                {st.big}
+              </div>
+              <div className="text-[11px] text-gray-300 leading-normal mt-1.5">
+                {st.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Hero Component */}
       <Hero />
 

@@ -32,7 +32,7 @@ export default function HSEPage() {
 
       {/* Commitment Section */}
       <section
-        className="max-w-[900px] mx-auto px-6 md:px-10 py-16 md:py-20"
+        className="max-w-[1240px] mx-auto px-0 py-16 md:py-20"
         data-reveal
       >
         <div className="text-[13px] font-display font-bold text-brand-accent tracking-[0.06em] uppercase">
@@ -87,7 +87,7 @@ export default function HSEPage() {
           </h2>
           <div className="w-[72px] h-[3px] bg-brand-accent mx-auto mb-[26px]"></div>
           <a
-            href="mailto:info@baoenergyng.com"
+            href="#footer"
             className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-[30px] py-[15px] rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
           >
             ➜ Contact Us

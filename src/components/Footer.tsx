@@ -4,7 +4,7 @@ import { services } from "@/data/servicesData";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal-950 text-gray-300 px-6 md:px-10 pt-[68px] pb-[26px]">
+    <footer id="footer" className="bg-charcoal-950 text-gray-300 px-6 md:px-10 pt-[68px] pb-[26px]">
       <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.4fr_1fr] gap-[44px]">
         {/* Col 1 - Brand */}
         <div>

@@ -34,8 +34,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // Get other services (slice to first 2 other than current)
-  const relatedServices = services.filter((s) => s.slug !== slug).slice(0, 2);
+  // Get other services (slice to first 3 other than current)
+  const relatedServices = services.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
     <ScrollReveal>
@@ -65,7 +65,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       {/* Service Body Copy */}
       <section
-        className="max-w-[900px] mx-auto px-6 md:px-10 py-16 md:py-20"
+        className="max-w-[1240px] mx-auto px-0 py-16 md:py-20"
         data-reveal
       >
         <div className="flex flex-col gap-[22px] text-text-body font-sans text-[16px] leading-[1.65]">
@@ -90,7 +90,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </h2>
           <div className="w-[80px] h-[3px] bg-brand-accent mx-auto mt-[22px] mb-[26px]"></div>
           <a
-            href="mailto:info@baoenergyng.com"
+            href="#footer"
             className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-[30px] py-[15px] rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
           >
             ➜ Contact Us
@@ -100,13 +100,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       {/* Other Services */}
       <section
-        className="max-w-[1240px] mx-auto px-6 md:px-10 py-16 md:py-20"
+        className="max-w-[1240px] mx-auto px-0 py-16 md:py-20"
         data-reveal
       >
         <h3 className="text-text-heading font-sans font-bold text-[18px] leading-[1.4] mb-[22px]">
           Other Services
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[22px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px]">
           {relatedServices.map((s) => (
             <ServiceCard
               key={s.id}

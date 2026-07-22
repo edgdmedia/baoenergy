@@ -6,6 +6,14 @@ import { stats } from "@/data/servicesData";
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  const images = [
+    "/assets/hero-workers.jpg",
+    "/assets/containers.jpg",
+    "/assets/refinery-sunset.jpg",
+    "/assets/refinery-night.jpg",
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,20 +23,34 @@ export default function Hero() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % images.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
     <div className="relative h-[660px] overflow-hidden">
-      {/* Parallax Background */}
-      <div
-        className="absolute inset-[-60px_0] bg-[url(/assets/hero-workers.jpg)] bg-center bg-[length:cover] will-change-transform"
-        style={{
-          transform: `translateY(${scrollY * 0.18}px)`,
-        }}
-      />
+      {/* Slideshow Backgrounds */}
+      {images.map((img, idx) => (
+        <div
+          key={img}
+          className={`absolute inset-[-60px_0] bg-center bg-cover transition-opacity duration-1000 will-change-transform ${
+            idx === currentIdx ? "opacity-100 animate-kenburns" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url(${img})`,
+            transform: `translateY(${scrollY * 0.18}px)`,
+          }}
+        />
+      ))}
+
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,9,7,0.86)] via-[rgba(10,9,7,0.42)] via-60% to-[rgba(10,9,7,0.2)]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,9,7,0.86)] via-[rgba(10,9,7,0.42)] via-60% to-[rgba(10,9,7,0.2)] z-10" />
 
       {/* Content */}
-      <div className="relative max-w-[1240px] mx-auto px-6 md:px-10 h-full flex flex-col justify-center pb-24 md:pb-16">
+      <div className="relative max-w-[1240px] mx-auto px-6 md:px-10 h-full flex flex-col justify-center pb-24 md:pb-16 z-20">
         <div className="w-16 h-1 bg-brand-accent mb-7"></div>
         <h1 className="text-white font-sans font-extrabold text-4xl md:text-[3.5rem] leading-[1.08] max-w-[820px] tracking-tight text-pretty">
           Meeting Future Demand In A Sustainable Way
@@ -52,9 +74,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats strip */}
-      <div className="absolute left-0 right-0 bottom-0 bg-[rgba(7,6,5,0.55)] backdrop-blur-[2px] border-t border-[rgba(255,255,255,0.12)]">
-        <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-5.5 grid grid-cols-2 md:grid-cols-4 gap-6">
+      {/* Stats strip - Desktop Only */}
+      <div className="hidden md:block absolute left-0 right-0 bottom-0 bg-[rgba(7,6,5,0.55)] backdrop-blur-[2px] border-t border-[rgba(255,255,255,0.12)] z-30">
+        <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-5.5 grid grid-cols-4 gap-6">
           {stats.map((st, i) => (
             <div key={i}>
               <div className="font-display font-extrabold text-[26px] text-brand-accent leading-none">

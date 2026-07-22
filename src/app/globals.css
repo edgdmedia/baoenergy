@@ -31,10 +31,30 @@
   --font-display: var(--font-manrope), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: #ffffff;
   color: var(--color-text-body);
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 16s ease-in-out infinite;
 }
 
 /* Scroll Reveal */
