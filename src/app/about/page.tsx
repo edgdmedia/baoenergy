@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <ScrollReveal>
       {/* Page Banner */}
-      <div className="relative h-[360px] flex items-center overflow-hidden">
+      <div className="relative h-90 flex items-center overflow-hidden">
         <Image
           src="/assets/containers.jpg"
           alt="Containers Banner"
@@ -21,8 +21,8 @@ export default function AboutPage() {
           className="object-cover object-[center_55%]"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,9,7,0.8)] to-[rgba(10,9,7,0.5)]" />
-        <div className="relative max-w-[1240px] mx-auto px-6 md:px-10 w-full">
+        <div className="absolute inset-0 bg-linear-to-r from-[rgba(10,9,7,0.8)] to-[rgba(10,9,7,0.5)]" />
+        <div className="relative max-w-310 mx-auto px-6 md:px-10 w-full">
           <div className="w-14 h-1 bg-brand-accent mb-5"></div>
           <h1 className="text-white font-sans font-extrabold text-4xl md:text-[2.5rem] leading-[1.15]">
             About Us
@@ -32,13 +32,13 @@ export default function AboutPage() {
 
       {/* Who We Are Content */}
       <section
-        className="max-w-[1240px] mx-auto px-6 md:px-10 py-16 md:py-22"
+        className="max-w-310 mx-auto px-6 md:px-10 py-16 md:py-22"
         data-reveal
       >
         <div className="text-[13px] font-display font-bold text-brand-accent tracking-[0.06em] uppercase">
           Who We Are
         </div>
-        <h2 className="text-text-heading font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] mt-[22px] mb-9">
+        <h2 className="text-text-heading font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] mt-5.5 mb-9">
           Providing affordable and reliable energy
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-text-body font-sans text-[16px] leading-[1.65]">
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       {/* Stats Band */}
       <section className="bg-charcoal-900 py-16 md:py-20 px-6 md:px-10" data-reveal>
-        <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-310 mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((st, i) => (
             <div key={i}>
               <div className="font-display font-extrabold text-3xl md:text-[30px] text-brand-accent leading-none">

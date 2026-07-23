@@ -44,21 +44,21 @@ export default function Navbar() {
         isScrolled ? "shadow-[0_6px_24px_rgba(12,10,8,0.12)]" : "shadow-none"
       }`}
     >
-      <div className="max-w-[1240px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
+      <div className="max-w-310 mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
             src="/assets/logos/primary.png"
             width={150}
             height={52}
-            className="h-[52px] w-auto cursor-pointer"
+            className="h-13 w-auto cursor-pointer"
             alt="Bao Energy"
             priority
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-[38px]">
-          <nav className="flex items-center gap-[38px]">
+        <div className="hidden md:flex items-center gap-9.5">
+          <nav className="flex items-center gap-9.5">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
@@ -78,7 +78,7 @@ export default function Navbar() {
           </nav>
           <a
             href="#footer"
-            className="bg-brand-accent text-charcoal-900 font-display font-bold text-[15px] px-6 py-2.5 rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
+            className="bg-brand-accent text-charcoal-900 font-display font-bold text-[15px] px-6 py-2.5 rounded-sm hover:bg-orange-600 transition-colors duration-200"
           >
             Contact
           </a>
@@ -88,7 +88,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-4">
           <a
             href="#footer"
-            className="bg-brand-accent text-charcoal-900 font-display font-bold text-[14px] px-4 py-2 rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
+            className="bg-brand-accent text-charcoal-900 font-display font-bold text-[14px] px-4 py-2 rounded-sm hover:bg-orange-600 transition-colors duration-200"
           >
             Contact
           </a>

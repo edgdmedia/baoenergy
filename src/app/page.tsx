@@ -31,12 +31,12 @@ export default function Home() {
 
       {/* Who We Are */}
       <section
-        className="max-w-[1240px] mx-auto px-6 md:px-10 py-16 md:py-24"
+        className="max-w-310 mx-auto px-6 md:px-10 py-16 md:py-24"
         data-reveal
       >
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
           {/* Left card */}
-          <div className="relative h-[300px] sm:h-[400px] md:h-[460px] rounded-xl overflow-hidden shadow-md">
+          <div className="relative h-75 sm:h-100 sm:h-115 rounded-xl overflow-hidden shadow-md">
             <Image
               src="/assets/containers.jpg"
               alt="Operations"
@@ -44,7 +44,7 @@ export default function Home() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute left-0 bottom-0 bg-brand-accent text-charcoal-900 p-6 md:py-5 md:px-[26px] rounded-tr-xl max-w-[280px]">
+            <div className="absolute left-0 bottom-0 bg-brand-accent text-charcoal-900 p-6 md:py-5 md:px-6.5 rounded-tr-xl max-w-70">
               <div className="font-display font-extrabold text-lg md:text-[20px] leading-snug">
                 A Vital Energy Resource For A Better Tomorrow
               </div>
@@ -57,13 +57,13 @@ export default function Home() {
               Who We Are
             </div>
             <div className="w-16 h-1 bg-brand-accent mt-3 mb-5"></div>
-            <h2 className="text-text-heading font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] mb-[22px] text-pretty">
+            <h2 className="text-text-heading font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] mb-5.5 text-pretty">
               Providing affordable and reliable energy services
             </h2>
-            <p className="text-text-body font-sans text-[16px] leading-[1.65] mb-[18px]">
+            <p className="text-text-body font-sans text-[16px] leading-[1.65] mb-4.5">
               BaoEnergy Services Ltd. was established to deliver exceptional value-added services across a range of industries, empowering our clients with top-notch solutions in the most proficient and adept manner. Our sustained competitive advantage strategically positions us to accomplish our clients&apos; goals.
             </p>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mt-[26px] mb-[30px]">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 mt-6.5 mb-7.5">
               {sectors.map((sec, i) => (
                 <div
                   key={i}
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <Link
               href="/about"
-              className="inline-flex items-center justify-center bg-charcoal-900 text-white font-display font-semibold px-6 py-3 rounded-[4px] hover:bg-brand-accent hover:text-charcoal-900 transition-colors duration-200"
+              className="inline-flex items-center justify-center bg-charcoal-900 text-white font-display font-semibold px-6 py-3 rounded-sm hover:bg-brand-accent hover:text-charcoal-900 transition-colors duration-200"
             >
               Discover More
             </Link>
@@ -86,17 +86,17 @@ export default function Home() {
 
       {/* What We Offer */}
       <section className="bg-charcoal-900 text-white py-16 md:py-24 px-6 md:px-10" data-reveal>
-        <div className="max-w-[1240px] mx-auto">
-          <div className="max-w-[640px] mb-12 md:mb-[52px]">
+        <div className="max-w-310 mx-auto">
+          <div className="max-w-160 mb-12 md:mb-13">
             <div className="text-[13px] font-display font-bold text-brand-accent tracking-[0.06em] uppercase">
               What We Offer
             </div>
-            <div className="w-16 h-[3px] bg-brand-accent mt-3 mb-[22px]"></div>
+            <div className="w-16 h-0.75 bg-brand-accent mt-3 mb-5.5"></div>
             <h2 className="text-white font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] text-pretty">
               Integrated support across the full asset lifecycle
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5.5">
             {homeServices.map((s) => (
               <ServiceCard key={s.id} service={s} />
             ))}
@@ -104,7 +104,7 @@ export default function Home() {
           <div className="flex mt-9">
             <Link
               href="/services"
-              className="inline-flex items-center bg-brand-accent text-charcoal-900 font-display font-semibold px-6 py-3 rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
+              className="inline-flex items-center bg-brand-accent text-charcoal-900 font-display font-semibold px-6 py-3 rounded-sm hover:bg-orange-600 transition-colors duration-200"
             >
               View All Services
             </Link>
@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* HSE teaser */}
       <section
-        className="max-w-[1240px] mx-auto px-6 md:px-10 py-16 md:py-24"
+        className="max-w-310 mx-auto px-6 md:px-10 py-16 md:py-24"
         data-reveal
       >
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
@@ -126,17 +126,17 @@ export default function Home() {
             <h2 className="text-text-heading font-sans font-bold text-3xl md:text-[2.25rem] leading-[1.2] mb-5 text-pretty">
               Safety is the foundation of every service we deliver
             </h2>
-            <p className="text-text-body font-sans text-[16px] leading-[1.65] mb-[26px]">
+            <p className="text-text-body font-sans text-[16px] leading-[1.65] mb-6.5">
               We regard the health of our people, the safety of every worksite, and the protection of the environment as inseparable from operational excellence. Every campaign is planned, executed and reviewed against a structured HSE framework built around a single commitment — zero harm.
             </p>
             <Link
               href="/hse"
-              className="inline-flex items-center justify-center bg-charcoal-900 text-white font-display font-semibold px-6 py-3 rounded-[4px] hover:bg-brand-accent hover:text-charcoal-900 transition-colors duration-200"
+              className="inline-flex items-center justify-center bg-charcoal-900 text-white font-display font-semibold px-6 py-3 rounded-sm hover:bg-brand-accent hover:text-charcoal-900 transition-colors duration-200"
             >
               Our HSE Approach
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5">
             {hsePrinciples.map((p, i) => (
               <div
                 key={i}
@@ -159,15 +159,15 @@ export default function Home() {
 
       {/* Trusted Brands */}
       <section className="bg-surface-sunken py-12 md:py-16 px-6 md:px-10" data-reveal>
-        <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-14">
-          <div className="flex-shrink-0">
+        <div className="max-w-310 mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-14">
+          <div className="shrink-0">
             <div className="text-[13px] font-display font-bold text-text-heading tracking-[0.06em] uppercase">
               Trusted Brands
             </div>
-            <div className="w-14 h-[3px] bg-brand-accent mt-2.5"></div>
+            <div className="w-14 h-0.75 bg-brand-accent mt-2.5"></div>
           </div>
           <div className="flex flex-wrap items-center gap-14">
-            <div className="relative h-[52px] w-[140px]">
+            <div className="relative h-13 w-35">
               <Image
                 src="/assets/client-seplat.jpg"
                 alt="Seplat Energy"
@@ -175,7 +175,7 @@ export default function Home() {
                 className="object-contain object-left"
               />
             </div>
-            <div className="relative h-[60px] w-[160px]">
+            <div className="relative h-15 w-40">
               <Image
                 src="/assets/client-firstep.png"
                 alt="First Exploration & Petroleum"
@@ -196,18 +196,18 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(7,6,5,0.82)] to-[rgba(7,6,5,0.9)]" />
-        <div className="relative max-w-[820px] mx-auto" data-reveal>
+        <div className="absolute inset-0 bg-linear-to-b from-[rgba(7,6,5,0.82)] to-[rgba(7,6,5,0.9)]" />
+        <div className="relative max-w-205 mx-auto" data-reveal>
           <h2 className="text-white font-sans font-extrabold text-3xl md:text-[2.5rem] leading-[1.15] text-pretty">
             Together, We Can Create A Safe And Sustainable Future
           </h2>
-          <div className="w-[80px] h-[3px] bg-brand-accent mx-auto mt-6 mb-[26px]"></div>
+          <div className="w-20 h-0.75 bg-brand-accent mx-auto mt-6 mb-6.5"></div>
           <p className="text-gray-150 font-sans font-medium text-lg leading-relaxed mb-8">
             Speak with our team about maintenance, integrity, procurement, metering and manpower support tailored to your operations.
           </p>
           <a
             href="mailto:info@baoenergyng.com"
-            className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-8 py-4 rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-8 py-4 rounded-sm hover:bg-orange-600 transition-colors duration-200"
           >
             ➜ Contact Us
           </a>
