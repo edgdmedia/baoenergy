@@ -4,8 +4,8 @@ import { services } from "@/data/servicesData";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-charcoal-950 text-gray-300 px-6 md:px-10 pt-[68px] pb-[26px]">
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.4fr_1fr] gap-[44px]">
+    <footer id="footer" className="bg-charcoal-950 text-gray-300 px-6 md:px-10 pt-17 pb-6.5">
+      <div className="max-w-310 mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1.4fr_1fr] gap-11">
         {/* Col 1 - Brand */}
         <div>
           <Link href="/">
@@ -13,17 +13,17 @@ export default function Footer() {
               src="/assets/logos/logo-white.png"
               width={130}
               height={48}
-              className="h-[48px] w-auto mb-[18px]"
+              className="h-12 w-auto mb-4.5"
               alt="Bao Energy"
             />
           </Link>
-          <p className="text-[14px] leading-[1.75] text-gray-300 mb-5 max-w-[340px]">
+          <p className="text-[14px] leading-[1.75] text-gray-300 mb-5 max-w-85">
             We are an indigenous and integrated services provider formed to deliver value added services to various industries such as the Oil and Gas, Telecommunication, FMCG, etc. within Nigeria.
           </p>
-          <div className="flex gap-[10px]">
+          <div className="flex gap-2.5">
             <a
               href="#"
-              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
               aria-label="Facebook"
             >
               <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
               aria-label="X"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@ export default function Footer() {
             </a>
             <a
               href="#"
-              className="w-[36px] h-[36px] rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
+              className="w-9 h-9 rounded-full border border-border-on-dark flex items-center justify-center text-gray-300 hover:border-brand-accent hover:text-brand-accent transition-colors duration-200"
               aria-label="YouTube"
             >
               <svg className="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Col 2 - Company */}
         <div>
-          <h4 className="text-white font-display font-bold mb-[18px] text-[16px]">Company</h4>
+          <h4 className="text-white font-display font-bold mb-4.5 text-[16px]">Company</h4>
           <div className="flex flex-col gap-3">
             <Link href="/" className="text-[14px] text-gray-300 hover:text-brand-accent transition-colors duration-200">
               Home
@@ -72,8 +72,8 @@ export default function Footer() {
 
         {/* Col 3 - Services */}
         <div>
-          <h4 className="text-white font-display font-bold mb-[18px] text-[16px]">Services</h4>
-          <div className="flex flex-col gap-[11px]">
+          <h4 className="text-white font-display font-bold mb-4.5 text-[16px]">Services</h4>
+          <div className="flex flex-col gap-2.75">
             {services.map((s) => (
               <Link
                 key={s.id}
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Col 4 - Get In Touch */}
         <div>
-          <h4 className="text-white font-display font-bold mb-[18px] text-[16px]">Get In Touch</h4>
+          <h4 className="text-white font-display font-bold mb-4.5 text-[16px]">Get In Touch</h4>
           <div className="text-[14px] leading-[1.9] text-gray-300">
             36 Calabar Street, Surulere, Lagos
             <br />
@@ -107,7 +107,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-[1240px] mx-auto mt-11 pt-[22px] border-t border-border-on-dark flex flex-col sm:flex-row justify-between items-center gap-4 text-[13px] text-gray-500">
+      <div className="max-w-310 mx-auto mt-11 pt-5.5 border-t border-border-on-dark flex flex-col sm:flex-row justify-between items-center gap-4 text-[13px] text-gray-500">
         <span>© 2026 BAO Energy, All rights reserved.</span>
         <span className="flex gap-5">
           <Link href="/about" className="text-gray-500 hover:text-brand-accent transition-colors duration-200">

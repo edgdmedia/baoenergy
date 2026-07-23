@@ -40,7 +40,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   return (
     <ScrollReveal>
       {/* Page Banner */}
-      <div className="relative h-[440px] flex items-center overflow-hidden">
+      <div className="relative h-110 flex items-center overflow-hidden">
         <Image
           src={service.img}
           alt={service.title}
@@ -48,16 +48,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(10,9,7,0.82)] to-[rgba(10,9,7,0.42)]" />
-        <div className="relative max-w-[1240px] mx-auto px-6 md:px-10 w-full flex flex-col justify-center h-full">
+        <div className="absolute inset-0 bg-linear-to-r from-[rgba(10,9,7,0.82)] to-[rgba(10,9,7,0.42)]" />
+        <div className="relative max-w-310 mx-auto px-6 md:px-10 w-full flex flex-col justify-center h-full">
           <Link
             href="/services"
             className="text-gray-150 hover:text-brand-accent text-[14px] mb-3 transition-colors duration-200"
           >
             ← Back to Services
           </Link>
-          <div className="w-14 h-1 bg-brand-accent mb-[18px]"></div>
-          <h1 className="text-white font-sans font-extrabold text-4xl md:text-[2.5rem] leading-[1.15] max-w-[820px]">
+          <div className="w-14 h-1 bg-brand-accent mb-4.5"></div>
+          <h1 className="text-white font-sans font-extrabold text-4xl md:text-[2.5rem] leading-[1.15] max-w-205">
             {service.title}
           </h1>
         </div>
@@ -65,10 +65,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       {/* Service Body Copy */}
       <section
-        className="max-w-[1240px] mx-auto px-0 py-16 md:py-20"
+        className="max-w-310 mx-auto px-4 py-16 md:py-20"
         data-reveal
       >
-        <div className="flex flex-col gap-[22px] text-text-body font-sans text-[16px] leading-[1.65]">
+        <div className="flex flex-col gap-5.5 text-text-body font-sans text-[16px] leading-[1.65]">
           {service.body.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
@@ -83,15 +83,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(7,6,5,0.82)] to-[rgba(7,6,5,0.9)]" />
-        <div className="relative max-w-[780px] mx-auto">
+        <div className="absolute inset-0 bg-linear-to-b from-[rgba(7,6,5,0.82)] to-[rgba(7,6,5,0.9)]" />
+        <div className="relative max-w-195 mx-auto">
           <h2 className="text-white font-sans font-bold text-3xl md:text-[2rem] leading-[1.2] text-pretty">
             A Vital Energy Resource For A Better Tomorrow
           </h2>
-          <div className="w-[80px] h-[3px] bg-brand-accent mx-auto mt-[22px] mb-[26px]"></div>
+          <div className="w-20 h-0.75 bg-brand-accent mx-auto mt-5.5 mb-6.5"></div>
           <a
             href="#footer"
-            className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-[30px] py-[15px] rounded-[4px] hover:bg-orange-600 transition-colors duration-200"
+            className="inline-flex items-center gap-2 bg-brand-accent text-charcoal-900 font-display font-bold text-[16px] px-7.5 px-3.75 rounded-sm hover:bg-orange-600 transition-colors duration-200"
           >
             ➜ Contact Us
           </a>
@@ -100,13 +100,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       {/* Other Services */}
       <section
-        className="max-w-[1240px] mx-auto px-0 py-16 md:py-20"
+        className="max-w-310 mx-auto px-4 py-16 md:py-20"
         data-reveal
       >
-        <h3 className="text-text-heading font-sans font-bold text-[18px] leading-[1.4] mb-[22px]">
+        <h3 className="text-text-heading font-sans font-bold text-[18px] leading-[1.4] mb-5.5">
           Other Services
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[22px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5.5">
           {relatedServices.map((s) => (
             <ServiceCard
               key={s.id}

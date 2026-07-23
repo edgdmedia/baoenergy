@@ -25,7 +25,7 @@ export default function ServiceCard({
         className="object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(9,8,6,0.95)] via-[rgba(9,8,6,0.15)] via-62% to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-[rgba(9,8,6,0.95)] via-[rgba(9,8,6,0.15)] via-62% to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-6">
         <h4 className="text-white font-sans font-bold text-[18px] leading-tight mb-2 group-hover:text-brand-accent transition-colors duration-200">
           {service.title}
